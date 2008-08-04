@@ -10,4 +10,9 @@ plugin.tx_alphasitemap_pi1 {
 	chars.wrap = <span>|</span>
 	
 	titleChar.wrap = <h3>|</h3>
+	
+	#menu switches
+	includeNotInMenu = 0
+	addWhere = 
+	
 }
