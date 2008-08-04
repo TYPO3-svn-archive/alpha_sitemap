@@ -1,0 +1,13 @@
+plugin.tx_alphasitemap_pi1 {
+	_CSS_DEFAULT_STYLE (
+		.alpha-sitemap-chars span {padding: 0 3px;}
+	)
+
+	pageMenu.wrap = <ul>|</ul>
+	pages.wrap = <li>|</li>
+	
+	charMenu.wrap = <p class="alpha-sitemap-chars">|</p>
+	chars.wrap = <span>|</span>
+	
+	titleChar.wrap = <h3>|</h3>
+}
