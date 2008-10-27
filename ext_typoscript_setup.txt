@@ -5,7 +5,7 @@ plugin.tx_alphasitemap_pi1 {
 
 	pageMenu.wrap = <ul>|</ul>
 	pages.wrap = <li>|</li>
-	
+		
 	charMenu.wrap = <p class="alpha-sitemap-chars">|</p>
 	chars.wrap = <span>|</span>
 	

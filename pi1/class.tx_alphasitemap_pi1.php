@@ -76,7 +76,7 @@ class tx_alphasitemap_pi1 extends tslib_pibase {
 		$aChar = array();
 		
 		
-		foreach ($menuItems_level1 as $uid => $rec) {
+		foreach ($menuItems_level1 as $uid => $rec) { 
 			if (t3lib_div::compat_version('4.2')) {
 				$char = t3lib_div::strtoupper(substr($rec['title'],0,1));
 			} else {
@@ -87,6 +87,8 @@ class tx_alphasitemap_pi1 extends tslib_pibase {
 			}
 			$aChar[$char] = 1;
 			$title = $rec['nav_title'] ? $rec['nav_title'] : $rec['title'];
+			// complete record to data to enable access to other fields in TS
+			$this->cObj->data = $rec;
 			$items[$char][$title] = $this->cObj->stdWrap($this->pi_linkToPage(
 				$title,  
 				$rec['uid'],
