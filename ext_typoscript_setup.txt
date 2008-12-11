@@ -1,18 +1,45 @@
 plugin.tx_alphasitemap_pi1 {
 	_CSS_DEFAULT_STYLE (
 		.alpha-sitemap-chars span {padding: 0 3px;}
+	    .alpha-sitemap-chars .active {font-weight: bold;}	
 	)
 
-	pageMenu.wrap = <ul>|</ul>
-	pages.wrap = <li>|</li>
-		
-	charMenu.wrap = <p class="alpha-sitemap-chars">|</p>
-	chars.wrap = <span>|</span>
+	# used for the page link
+	titleField = title
+
+	# stdWrap 
+	pageMenu {
+		wrap = <ul>|</ul>
+	}
+	
+	# stdWrap for the pages. You can add informations if you want
+	pages {
+		wrap = <li>|</li>
+	}
+	
+	# stdWrap 	
+	charMenu {
+		wrap = <p class="alpha-sitemap-chars">|</p>
+	}
+	
+	# stdWrap
+	chars {
+		wrap = <span>|</span>
+	}
+	
+	# stdWrap
+	activeChar {
+		ATagParams = class="active"
+		doNotLink = 1
+		wrap = <span class="active">|</span> 
+	}	
 	
 	titleChar.wrap = <h3>|</h3>
 	
 	#menu switches
 	includeNotInMenu = 0
+	# add additional where clause like "AND doktype!=6"
+	# has to start with "AND". Be careful, wrong clause can damage
 	addWhere = 
 	
 }
